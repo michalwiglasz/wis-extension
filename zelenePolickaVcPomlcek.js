@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Zelene policka pro WIS vc. pomlcek
-// @description    Zezelena splnene predmety ve WISu - varianta se zelenymi pomlckami
+// @description    Zezelena splnene predmety ve WISu - varianta s nadpisy v tabulce
 // @include        https://wis.fit.vutbr.cz/FIT/st/study-v.php*
 // @include        https://wis.fit.vutbr.cz/FIT/st/study-a.php*
 // ==/UserScript==
@@ -9,9 +9,6 @@
 
 var color_done = '#90EE90'
 var color_fail = '#ff7f7f'
-
-
-var table;
 
 function elementText(el) {
     if (el.textContent)
@@ -25,13 +22,7 @@ function trim (str) {
 }
 
 // find results table
-var fonts = document.getElementsByTagName('font');
-for(var i = 0; i < fonts.length; i++) {
-    if (elementText(fonts[i]).substring(0, 4) == '* - ') {
-        table = fonts[i].parentNode.getElementsByTagName('table')[0];
-        break;
-    }
-}
+var table = document.querySelector('table h2').closest('table');
 
 // walk through subjects
 var rows = table.getElementsByTagName('tr');
