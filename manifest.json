@@ -1,6 +1,6 @@
 {
   "name": "Vylepšení WISu",
-  "version": "1.5",
+  "version": "1.6",
   "manifest_version": 2,
   "description": "Vylepšení WISu - zelená políčka pro splněné předměty a červená políčka pro zaplněné termíny při přihlašování cvičení či projektů.",
   "icons": {
