@@ -49,8 +49,8 @@ for(var i = 0; i < rows.length; i++) {
         var s_date = elementText(cells[7]);
 
         // student must get accreditation?
-        var need_only_accr = (s_ending == 'Zá' || s_ending == 'Ac')
-        var need_accr = (need_only_accr || s_ending == 'ZáZk' || s_ending == 'Ac+Ex' || s_ending == 'KlZá' || s_ending == 'ClAc')
+        var need_only_accr = (s_ending == 'Zá' || s_ending == 'Cr')
+        var need_accr = (need_only_accr || s_ending == 'ZáZk' || s_ending == 'Cr+Ex' || s_ending == 'KlZá' || s_ending == 'ClCr')
         if (need_accr) {
             if (s_accr == 'ano' || s_accr == 'ano*' || s_accr == 'yes*' || s_accr == 'yes') {
                 accr_done = true;
@@ -65,7 +65,7 @@ for(var i = 0; i < rows.length; i++) {
         }
 
         // student is given mark
-        var need_exam = (s_ending == 'ZáZk' || s_ending == 'Zk' || s_ending == 'Ac+Ex' || s_ending == 'Ex' || s_ending == 'KlZá' || s_ending == 'ClAc')
+        var need_exam = (s_ending == 'ZáZk' || s_ending == 'Zk' || s_ending == 'Cr+Ex' || s_ending == 'Ex' || s_ending == 'KlZá' || s_ending == 'ClCr')
         if (need_exam) {
             if (s_mark != '*') {
                 exam_unknown = false;
